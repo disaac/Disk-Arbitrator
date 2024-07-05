@@ -14,7 +14,7 @@
 
 - (NSImage *)attachDiskImageIcon
 {
-	NSImage *dmgIcon = [[NSWorkspace sharedWorkspace] iconForFileType:@"dmg"];
+	NSImage *dmgIcon = [[NSWorkspace sharedWorkspace] iconForFile:@"dmg"];
 	NSImage *plugImage = [NSImage imageNamed:@"ToolbarItem Attach Disk Plug"];
 	
 	NSBitmapImageRep *compositedImage = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL pixelsWide:32 pixelsHigh:32 bitsPerSample:8 samplesPerPixel:4 hasAlpha:YES isPlanar:NO colorSpaceName:NSCalibratedRGBColorSpace bytesPerRow:0 bitsPerPixel:0];
@@ -75,10 +75,10 @@
 //---------------------------------------------------------- 
 - (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar {
 	return [NSArray arrayWithObjects: 
-			NSToolbarSeparatorItemIdentifier,
+			//NSToolbarSeparatorItemIdentifier,
 			NSToolbarSpaceItemIdentifier,
 			NSToolbarFlexibleSpaceItemIdentifier,
-			NSToolbarCustomizeToolbarItemIdentifier,
+			//NSToolbarCustomizeToolbarItemIdentifier,
 			ToolbarItemInfoIdentifier,
 			ToolbarItemMountIdentifier,
 			ToolbarItemEjectIdentifier,
@@ -96,7 +96,7 @@
 			NSToolbarSpaceItemIdentifier,
 			ToolbarItemAttachDiskImageIdentifier,
 			NSToolbarFlexibleSpaceItemIdentifier,
-			NSToolbarCustomizeToolbarItemIdentifier, 
+			//NSToolbarCustomizeToolbarItemIdentifier,
 			nil];
 }
 

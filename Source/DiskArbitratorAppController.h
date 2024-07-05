@@ -11,7 +11,7 @@
 @class Arbitrator;
 @class Disk;
 
-@interface AppController : NSObject // <NSApplicationDelegate> 
+@interface AppController : NSObject <NSToolbarItemValidation>// <NSApplicationDelegate> //https://www.reddit.com/r/macosprogramming/comments/19ai5u8/toolbar_validation/ //https://developer.apple.com/documentation/appkit/nstoolbaritemvalidation?language=objc
 
 @property (assign) IBOutlet NSPanel *window;
 @property (assign) IBOutlet NSMenu *statusMenu;
