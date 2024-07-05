@@ -390,7 +390,7 @@
 	panel.allowsMultipleSelection = NO;
 	panel.message = NSLocalizedString(@"Select a disk image to attach:", nil);
 	
-	panel.allowedFileTypes = [self.class diskImageFileExtensions];
+	panel.allowedContentTypes = [self.class diskImageFileExtensions];
 	
 	[self.userInfo setObject:[NSNumber numberWithBool:YES] forKey:@"readOnly"];
 	
